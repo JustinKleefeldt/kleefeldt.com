@@ -1,0 +1,52 @@
+:root
+{
+  --primary-color: rgba(27, 135, 108, 1);
+  --secondary-color: rgba(145, 197, 179, 1);
+  --highlight-color: rgba(152, 183, 227, 0.89);
+  --background-color: rgba(235, 235, 235, 0.3);
+
+  --header-height: 60px;
+
+  --about-me-section-max-height: 1200px;
+
+  --project-element-width: 20%;
+  --project-element-horizontal-margin: 10px;
+  --project-spacing-line-vertical-margin: 20px;
+}
+
+body
+{
+  font-family: 'Montserrat', Arial;
+  margin: 0;
+  padding-top: var(--header-height);
+}
+
+.scroll-margin
+{
+  scroll-margin-top: var(--header-height);
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+  background: var(--secondary-color);
+  border-left: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: var(--primary-color);
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+::-webkit-scrollbar-thumb:active
+{
+  background: var(--secondary-color);
+  border: 1px solid black;
+}

@@ -1,0 +1,65 @@
+{
+  "TradingCardGame":
+  {
+    "name": "Trading Card Game",
+    "timespan": "05/2018 - 08/2018",
+    "description": "Im Rahmen meiner Ausbildung in einer Projektarbeit entstandenes Sammelkartenspiel bei dem zwei Spieler mit beliebig zusammenstellbaren Kartensets gegeneinander antreten können. Hierbei war meine Hauptaufgabe das Erstellen eines generischen Resourcen-Ladesystems mit dem sämtliche für das Spiel erforderlichen Assets zur Laufzeit asynchron geladen werden konnten. Dies erfolgte mithilfe von AssetBundles in der Unity Engine. Außerdem war ich an diversen Dokumentation wie dem Game Design Document, Lasten- und Pflichtenheft beteiligt.",
+    "github": "https://github.com/JustinKleefeldt/TradingCardGame/tree/master/MasterScene/Assets",
+    "website": "",
+    "youtube": ""
+  },
+  "Jon_T":
+  {
+    "name": "Jon_T",
+    "timespan": "09/2018 - 02/2019",
+    "description": "Im Rahmen meiner Ausbildung in einer Projektarbeit entstandenes entloses Rennspiel bei dem ein Spieler durch eine Welt läuft, die zur Laufzeit um ihn herum generiert und persistent in einer Datenbank abgespeichert wird. Hierbei habe ich das System geschrieben was die verschiedenen Teilstücke der Welt zur Laufzeit um die Spielerfigur generiert und abspeichert oder im Falle eines bereits bestehenden Bereiches aus der Datenbank lädt. Dies erfolgte mithilfe eines Tile-Systems und einem Vertex-Grid in der Unity Engine. Außerdem war ich an diversen Dokumentation wie dem Game Design Document, Lasten- und Pflichtenheft beteiligt.",
+    "github": "https://github.com/JustinKleefeldt/Jon_T",
+    "website": "",
+    "youtube": ""
+  },
+  "Coinflip":
+  {
+    "name": "Coinflip",
+    "timespan": "08/2023",
+    "description": "",
+    "github": "",
+    "website": "",
+    "youtube": ""
+  },
+  "Calculator":
+  {
+    "name": "Calculator",
+    "timespan": "08/2023",
+    "description": "",
+    "github": "",
+    "website": "",
+    "youtube": ""
+  },
+  "RockPaperScissors":
+  {
+    "name": "Rock Paper Scissors",
+    "timespan": "08/2023",
+    "description": "",
+    "github": "",
+    "website": "",
+    "youtube": ""
+  },
+  "YoutubeWebsite":
+  {
+    "name": "youtube.com Clone",
+    "timespan": "08/2023",
+    "description": "",
+    "github": "",
+    "website": "",
+    "youtube": ""
+  },
+  "kleefeldtWebsite":
+  {
+    "name": "kleefeldt.com",
+    "timespan": "08/2023 - 09/2023",
+    "description": "",
+    "github": "",
+    "website": "https://kleefeldt.com/",
+    "youtube": ""
+  }
+}

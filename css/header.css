@@ -1,0 +1,66 @@
+.header
+{
+  height: var(--header-height);
+  background-color: var(--primary-color);
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.header-left-section
+{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.header-clover-container
+{
+  height: 30px;
+}
+
+.header-clover-icon
+{
+  height: 100%;
+}
+
+.header-website-name
+{
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.header-right-section
+{
+  flex: 1;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.header-right-section div
+{
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.header-right-section div:hover
+{
+  font-weight: 500;
+  border-bottom: 4px solid black;
+  cursor: pointer;
+}
