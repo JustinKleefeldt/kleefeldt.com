@@ -4,7 +4,6 @@
 {
   width: 100%;
   height: calc(100vh - var(--header-height));
-  /*max-height: var(--about-me-section-max-height);*/
   background-color: var(--background-color);
   display: flex;
   justify-content: center;
@@ -325,7 +324,6 @@
   background-color: white;
   width: calc(100% - 100px);
   min-width: 475px;
-  max-height: 400px;
   padding: 70px 50px;
   display: flex;
   align-items: left;
@@ -432,6 +430,7 @@
 {
   background-color: white;
   width: calc(100% - 100px);
+  min-width: 475px;
   padding: 70px 50px;
   display: flex;
   flex-direction: column;
@@ -540,7 +539,6 @@
   width: var(--project-element-width);
   height: 90%;
   min-width: 250px;
-  /*max-height: 585px;*/
   padding: 20px;
   margin: 0 10px;
   border-radius: 25px;
@@ -559,7 +557,6 @@
   width: var(--project-element-width);
   height: 80%;
   min-width: 250px;
-  /*max-height: 530px;*/
   padding: 20px;
   margin: 0 10px;
   border-radius: 25px;
@@ -578,7 +575,6 @@
   width: var(--project-element-width);
   height: 70%;
   min-width: 250px;
-  /*max-height: 530px;*/
   padding: 20px;
   margin: 0 var(--project-element-horizontal-margin);
   border-radius: 25px;
@@ -589,6 +585,11 @@
   box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.4);
   z-index: 12;
   transition: transform 0.15s, height 0.15s;
+}
+
+.js-project-left-offscreen-element, .js-project-right-offscreen-element
+{
+  z-index: 11;
 }
 
 .animToLeft-OffscreenToBorder

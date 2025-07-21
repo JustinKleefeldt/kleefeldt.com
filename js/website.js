@@ -9,36 +9,41 @@ const sections =
   otherActivities: document.querySelector('.js-other-activities')
 }
 
-document.querySelectorAll('.js-about-me-scroll').forEach(value =>
-  {
-    value.addEventListener('click', () => sections.aboutMe.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-    value.addEventListener('touchstart', () => sections.aboutMe.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-  }
-);
+function addScrollEventListeners()
+{
+  document.querySelectorAll('.js-about-me-scroll').forEach(value =>
+    {
+      value.addEventListener('click', () => sections.aboutMe.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+      value.addEventListener('touchstart', () => sections.aboutMe.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+    }
+  );
 
-document.querySelectorAll('.js-cv-scroll').forEach(value =>
-  {
-    value.addEventListener('click', () => sections.cv.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-    value.addEventListener('touchstart', () => sections.cv.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-  }
-);
+  document.querySelectorAll('.js-cv-scroll').forEach(value =>
+    {
+      value.addEventListener('click', () => sections.cv.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+      value.addEventListener('touchstart', () => sections.cv.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+    }
+  );
 
-document.querySelectorAll('.js-projects-scroll').forEach(value =>
-  {
-    value.addEventListener('click', () => sections.projects.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-    value.addEventListener('touchstart', () => sections.projects.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-  }
-);
+  document.querySelectorAll('.js-projects-scroll').forEach(value =>
+    {
+      value.addEventListener('click', () => sections.projects.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+      value.addEventListener('touchstart', () => sections.projects.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+    }
+  );
 
-document.querySelectorAll('.js-contact-scroll').forEach(value =>
-  {
-    value.addEventListener('click', () => sections.contact.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-    value.addEventListener('touchstart', () => sections.contact.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-  }
-);
+  document.querySelectorAll('.js-contact-scroll').forEach(value =>
+    {
+      value.addEventListener('click', () => sections.contact.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+      value.addEventListener('touchstart', () => sections.contact.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+    }
+  );
 
-document.querySelector('.js-other-activities-button').addEventListener('click', () => sections.otherActivities.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-document.querySelector('.js-other-activities-button').addEventListener('touchstart', () => sections.otherActivities.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+  document.querySelector('.js-other-activities-button').addEventListener('click', () => sections.otherActivities.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+  document.querySelector('.js-other-activities-button').addEventListener('touchstart', () => sections.otherActivities.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+}
+
+addScrollEventListeners();
 
 //================ Overlay Text (About me - Section) ================//
 
@@ -133,29 +138,67 @@ function init()
   {
     updateProjectElement(projects.at(projectDisplayIndex + offset), projectDisplayElements[index]);
   }
+  addArrowButtonEventListeners();
 }
 
 init();
 
 function moveLeft()
 {
+  removeArrowButtonEventListeners();
   projectDisplayIndex--;
   animateElements('left');
-  setTimeout(() => moveProjects(), 1000);
+  setTimeout(moveProjects, 1000);
+  setTimeout(addArrowButtonEventListeners, 1000);
 }
-
-document.querySelector('.js-move-left').addEventListener('click', () => moveLeft());
-document.querySelector('.js-move-left').addEventListener('touchstart', () => moveLeft());
 
 function moveRight()
 {
+  removeArrowButtonEventListeners();
   projectDisplayIndex++;
   animateElements('right');
-  setTimeout(() => moveProjects(), 1000);
+  setTimeout(moveProjects, 1000);
+  setTimeout(addArrowButtonEventListeners, 1000);
 }
 
-document.querySelector('.js-move-right').addEventListener('click', () => moveRight());
-document.querySelector('.js-move-right').addEventListener('touchstart', () => moveRight());
+function moveProjects()
+{
+  if (projectDisplayIndex == projects.length)
+    projectDisplayIndex = 0;
+  else if (projectDisplayIndex < 0)
+    projectDisplayIndex = projects.length - 1;
+
+  for (let offset = -3, index = 0; index < projectDisplayElements.length; offset++, index++)
+  {
+    let currProjectIndex = projectDisplayIndex + offset;
+
+    if (currProjectIndex >= projects.length)
+      currProjectIndex = currProjectIndex % projects.length;
+
+    updateProjectElement(projects.at(currProjectIndex), projectDisplayElements[index]);
+  }
+}
+
+function updateProjectElement(input, target)
+{
+  let html = '<div class="project-element-upper-section">';
+  html += input.name && `<div class="project-title">${input.name}</div>`;
+  html += input.timespan && `<div class="project-timespan">${input.timespan}</div>`;
+  if (input.youtube || input.website || input.github)
+  {
+    html += '<div class="project-links">';
+    html += input.youtube && `<a href="${input.youtube}" target="_blank"><img class="project-youtube-image" src="../img/youtube.png"></a>`;
+    html += input.website && `<a href="${input.website}" target="_blank"><img class="project-website-image" src="../img/website.png"></a>`;
+    html += input.github && `<a href="${input.github}" target="_blank"><img class="project-github-image" src="../img/github.png"></a>`;
+    html += '</div>';
+  }
+  html += '</div><div class="project-spacing-line"></div><div class="project-element-lower-section">';
+  html += input.description && `<div class="project-description">${input.description}</div>`;
+  html += '</div>';
+
+  target.innerHTML = html;
+  return html;
+}
 
 function animateElements(direction)
 {
@@ -199,46 +242,18 @@ function animateElements(direction)
   }
 }
 
-function moveProjects()
+function addArrowButtonEventListeners()
 {
-  checkArrayBoundries();
-
-  for (let offset = -3, index = 0; index < projectDisplayElements.length; offset++, index++)
-  {
-    let currProjectIndex = projectDisplayIndex + offset;
-
-    if (currProjectIndex >= projects.length)
-      currProjectIndex = currProjectIndex % projects.length;
-
-    updateProjectElement(projects.at(currProjectIndex), projectDisplayElements[index]);
-  }
+  document.querySelector('.js-move-left').addEventListener('click', moveLeft);
+  document.querySelector('.js-move-left').addEventListener('touchstart', moveLeft);
+  document.querySelector('.js-move-right').addEventListener('click', moveRight);
+  document.querySelector('.js-move-right').addEventListener('touchstart', moveRight);
 }
 
-function updateProjectElement(input, target)
+function removeArrowButtonEventListeners()
 {
-  let html = '<div class="project-element-upper-section">';
-  html += input.name ? `<div class="project-title">${input.name}</div>` : '';
-  html += input.timespan ? `<div class="project-timespan">${input.timespan}</div>` : '';
-  if (input.youtube || input.website || input.github)
-  {
-    html += '<div class="project-links">';
-    html += input.youtube ? `<a href="${input.youtube}" target="_blank"><img class="project-youtube-image" src="../img/youtube.png"></a>` : '';
-    html += input.website ? `<a href="${input.website}" target="_blank"><img class="project-website-image" src="../img/website.png"></a>` : '';
-    html += input.github ? `<a href="${input.github}" target="_blank"><img class="project-github-image" src="../img/github.png"></a>` : '';
-    html += '</div>';
-  }
-  html += '</div><div class="project-spacing-line"></div><div class="project-element-lower-section">';
-  html += input.description ? `<div class="project-description">${input.description}</div>` : '';
-  html += '</div>';
-
-  target.innerHTML = html;
-  return html;
-}
-
-function checkArrayBoundries()
-{
-  if (projectDisplayIndex == projects.length)
-    projectDisplayIndex = 0;
-  else if (projectDisplayIndex < 0)
-    projectDisplayIndex = projects.length - 1;
+  document.querySelector('.js-move-left').removeEventListener('click', moveLeft);
+  document.querySelector('.js-move-left').removeEventListener('touchstart', moveLeft);
+  document.querySelector('.js-move-right').removeEventListener('click', moveRight);
+  document.querySelector('.js-move-right').removeEventListener('touchstart', moveRight);
 }
