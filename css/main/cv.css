@@ -143,11 +143,6 @@
   margin-bottom: 10px;
 }
 
-.cv-box-location
-{
-  margin-bottom: 30px;
-}
-
 .cv-box-chips
 {
   width: 100%;
@@ -174,11 +169,18 @@
   align-items: center;
 }
 
-.cv-spacing-line
+.cv-spacing-line-vertical
 {
   height: 70%;
   border: 1px solid var(--primary-color);
   margin: 0 25px;
+}
+
+.cv-spacing-line-horizontal
+{
+  width: 70%;
+  border: 1px solid var(--primary-color);
+  margin: 25px 0px;
 }
 
 .cv-box-right-section
@@ -248,4 +250,74 @@
   height: 10px;
   display: inline-block;
   margin-right: 2px;
+}
+
+/* Bis zu 480px (z. B. iPhone SE, kleine Androids) */
+@media (max-width: 480px) {
+  /* Anpassungen für sehr kleine Bildschirme */
+  .cv-content-box
+  {
+    flex-direction: column;
+  }
+
+  .cv-spacing-line-vertical
+  {
+    width: 70%;
+    margin: 25px 0;
+  }
+}
+
+/* 481px bis 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Layout für gängige Smartphones im Hochformat */
+  .cv-content-box
+  {
+    flex-direction: column;
+  }
+
+  .cv-spacing-line-vertical
+  {
+    width: 70%;
+    margin: 25px 0;
+  }
+}
+
+/* 768px bis 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Layout für Tablets oder Smartphones im Querformat */
+  .cv-content-box
+  {
+    flex-direction: column;
+  }
+
+  .cv-spacing-line-vertical
+  {
+    width: 70%;
+    margin: 25px 0;
+  }
+}
+
+/* 1024px bis 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /* Layout für kleinere Desktops oder große Tablets im Querformat */
+  .cv-content-box
+  {
+    flex-direction: column;
+  }
+
+  .cv-spacing-line-vertical
+  {
+    width: 70%;
+    margin: 25px 0;
+  }
+}
+
+/* ab 1280px */
+@media (min-width: 1280px) {
+  /* Layout für große Bildschirme */
+}
+
+/* ab 1600px oder 1920px */
+@media (min-width: 1600px) {
+  /* Z. B. zentrierte Inhalte, größere Schriftarten */
 }

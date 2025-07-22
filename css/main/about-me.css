@@ -212,3 +212,63 @@
   margin-top: 20px;
   overflow-y: auto;
 }
+
+/* Bis zu 480px (z. B. iPhone SE, kleine Androids) */
+@media (max-width: 480px) {
+  /* Anpassungen für sehr kleine Bildschirme */
+  .about-me-container
+  {
+    flex-direction: column;
+  }
+
+  .about-me-right-section
+  {
+    background-color: white;
+    box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* 481px bis 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Layout für gängige Smartphones im Hochformat */
+  .about-me-container
+  {
+    flex-direction: column;
+  }
+
+  .about-me-right-section
+  {
+    background-color: white;
+    box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* 768px bis 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Layout für Tablets oder Smartphones im Querformat */
+  .about-me-container
+  {
+    flex-direction: column;
+  }
+  
+  .about-me-right-section
+  {
+    background-color: white;
+    box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* 1024px bis 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /* Layout für kleinere Desktops oder große Tablets im Querformat */
+}
+
+/* ab 1280px */
+@media (min-width: 1280px) {
+  /* Layout für große Bildschirme */
+}
+
+/* ab 1600px oder 1920px */
+@media (min-width: 1600px) {
+  /* Z. B. zentrierte Inhalte, größere Schriftarten */
+}
