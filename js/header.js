@@ -1,44 +1,40 @@
-//================ Button Scroll (Header - Section) ================//
+//============================== HEADER ==============================//
+const headerElement = document.querySelector('.js-header');
 
-const sections =
+export function renderHeader()
 {
-  aboutMe: document.querySelector('.about-me-section'),
-  cv: document.querySelector('.cv-section'),
-  projects: document.querySelector('.projects-section'),
-  contact: document.querySelector('.contact-section'),
-  otherActivities: document.querySelector('.js-other-activities')
+  headerElement.innerHTML = generateHeaderHTML();
 }
 
-export function addScrollEventListeners()
+function generateHeaderHTML()
 {
-  document.querySelectorAll('.js-about-me-scroll').forEach(value =>
-    {
-      value.addEventListener('click', () => sections.aboutMe.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-      value.addEventListener('touchstart', () => sections.aboutMe.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-    }
-  );
+  const html =
+    `
+      <div class="header-left-section">
+        <div class="header-clover-container">
+          <img class="header-clover-icon" src="../img/kleeblatt.png">
+        </div>
+        <div class="header-website-name">
+          kleefeldt.com
+        </div>
+      </div>
+      <div class="header-right-section">
+        <div class="js-about-me-scroll">
+          &Uuml;ber mich
+        </div>
+        <div class="js-cv-scroll">
+          Lebenslauf
+        </div>
+        <div class="js-projects-scroll">
+          Projekte
+        </div>
+        <div class="js-contact-scroll">
+          Kontakt
+        </div>
+      </div>
+    `;
 
-  document.querySelectorAll('.js-cv-scroll').forEach(value =>
-    {
-      value.addEventListener('click', () => sections.cv.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-      value.addEventListener('touchstart', () => sections.cv.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-    }
-  );
-
-  document.querySelectorAll('.js-projects-scroll').forEach(value =>
-    {
-      value.addEventListener('click', () => sections.projects.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-      value.addEventListener('touchstart', () => sections.projects.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-    }
-  );
-
-  document.querySelectorAll('.js-contact-scroll').forEach(value =>
-    {
-      value.addEventListener('click', () => sections.contact.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-      value.addEventListener('touchstart', () => sections.contact.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-    }
-  );
-
-  document.querySelector('.js-other-activities-button').addEventListener('click', () => sections.otherActivities.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
-  document.querySelector('.js-other-activities-button').addEventListener('touchstart', () => sections.otherActivities.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}));
+  return html;
 }
+
+export default renderHeader;

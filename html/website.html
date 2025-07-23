@@ -20,91 +20,13 @@
   </head>
   <body>
     <!--============================== HEADER ==============================-->
-    <header class="header">
-      <div class="header-left-section">
-        <div class="header-clover-container">
-          <img class="header-clover-icon" src="../img/kleeblatt.png">
-        </div>
-        <div class="header-website-name">
-          kleefeldt.com
-        </div>
-      </div>
-      <div class="header-right-section">
-        <div class="js-about-me-scroll">
-          &Uuml;ber mich
-        </div>
-        <div class="js-cv-scroll">
-          Lebenslauf
-        </div>
-        <div class="js-projects-scroll">
-          Projekte
-        </div>
-        <div class="js-contact-scroll">
-          Kontakt
-        </div>
-      </div>
-    </header>
+    <header class="header js-header"></header>
     <main>
       <!--============================== ABOUT ME ==============================-->
-      <section class="about-me-section js-overlay-container scroll-margin">
-        <div class="about-me-container">
-          <div class="about-me-left-section">
-            <div class="about-me-upper-left-section">
-              <img class="about-me-picture" src="../img/bewerbungsfoto.jpg">
-              <div class="about-me-name">
-                <div class="about-me-first-name">
-                  Justin
-                </div>
-                <div class="about-me-last-name">
-                  Kleefeldt
-                </div>
-              </div>
-              <div class="about-me-spacing-line"></div>
-              <div class="about-me-job-description">
-                Junior Developer
-              </div>
-            </div>
-            <div class="about-me-lower-left-section">
-              <a href="https://www.linkedin.com/in/justin-kleefeldt-74379b28b" target="_blank">
-                <img class="about-me-linkedin-image" src="../img/linkedin.png">
-              </a>
-              <a href="https://github.com/JustinKleefeldt?tab=repositories" target="_blank">
-                <img class="about-me-github-image" src="../img/github.png">
-              </a>
-            </div>
-          </div>
-          <div class="about-me-right-section">
-            <div class="about-me-greeting">
-              Willkommen :)
-            </div>
-            <div class="about-me-who-what">
-              Wer bin ich & was ich mache
-            </div>
-            <div class="about-me-buttons">
-              <button class="about-me-cv-button js-cv-scroll">
-                LEBENSLAUF
-              </button>
-              <button class="about-me-project-button js-projects-scroll">
-                PROJEKTE
-              </button>
-            </div>
-            <div class="about-me-text">
-              Mein Name ist Justin Kleefeldt, ich bin 27 Jahre alt und seit 14 Jahren Besitzer eines Jack-Russel-Terriers namens Buddy. In meiner Freizeit unternehme ich gerne etwas mit meinem Hund, treffe mich mit Freunden, programmiere verschiedenste Projekte in verschiedenen Programmiersprachen oder spiele Videospiele aller Art.
-              <br><br>
-              Aktuell bin ich auf der Suche nach einer Junior Stelle als Frontend-, Backend- oder Full-Stack-Entwickler um erste Berufserfahrung zu sammeln.
-              <br><br>
-              Auf dieser Portfolio-Website findest du Informationen über mich, meinen Lebenslauf sowie viele meiner bisherigen Projekte.
-            </div>
-          </div>
-        </div>
-        <div class="about-me-overlay-shape js-overlay-shape"></div>
-        <div class="about-me-overlay-text js-overlay-text">
-          &ltabout me&gt
-        </div>
-      </section>
+      <section class="about-me-section js-overlay-container scroll-margin"></section>
       <!--============================== CV ==============================-->
       <section class="cv-section scroll-margin">
-        <div class="cv-container">
+        <!-- <div class="cv-container">
           <div class="cv-main-heading-row">
             <div class="cv-main-heading-box"></div>
             <div class="cv-main-heading">
@@ -115,7 +37,7 @@
             <div class="cv-sub-heading">
               Ausbildung
             </div>
-            <!-- <a class="cv-download" href="../downloads/..." download> -->
+            <a class="cv-download" href="../downloads/..." download>
             <a class="cv-download" download>
               <div class="cv-download-button">
                 CV herunterladen
@@ -462,7 +384,7 @@
         </div>
         <div class="cv-overlay-text">
           &ltcv&gt
-        </div>
+        </div> -->
       </section>
       <!--============================== PROJECTS ==============================-->
       <section class="projects-section scroll-margin">
@@ -664,122 +586,11 @@
         </div>
       </section>
       <!--============================== CONTACT ==============================-->
-      <section class="contact-section scroll-margin">
-        <div class="contact-overlay-text">
-          &ltcontact me&gt
-        </div>
-        <div class="contact-container">
-          <div class="contact-main-heading-row">
-            <div class="contact-main-heading-box"></div>
-            <div class="contact-main-heading">
-              Kontakt
-            </div>
-          </div>
-          <form class="contact-form-container">
-            <div class="contact-multi-section-row">
-              <label class="contact-multi-row-left-section">
-                <span>
-                  Vorname *
-                </span>
-                <input class="contact-input" type="text" required="required">
-              </label>
-              <label class="contact-multi-row-right-section">
-                <span>
-                  Nachname *
-                </span>
-                <input class="contact-input" type="text" required="required">
-              </label>
-            </div>
-            <div class="contact-multi-section-row contact-spacing">
-              <label class="contact-multi-row-left-section">
-                <span>
-                  E-Mail *
-                </span>
-                <input class="contact-input" type="text" required="required">
-              </label>
-              <label class="contact-multi-row-right-section">
-                <span>
-                  Firma
-                </span>
-                <input class="contact-input" type="text">
-              </label>
-            </div>
-            <label class="contact-single-section-row contact-spacing">
-              <span>
-                Betreff
-              </span>
-              <input class="contact-input" type="text">
-            </label>
-            <label class="contact-single-section-row contact-spacing">
-              <span>
-                Nachricht
-              </span>
-              <textarea class="contact-message contact-input" rows="4"></textarea>
-            </label>
-            <div class="contact-last-row">
-              <button class="contact-button">
-                Absenden
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+      <section class="contact-section scroll-margin"></section>
     </main>
     <!--============================== FOOTER ==============================-->
-    <footer class="footer">
-      <div class="footer-left-section">
-        <div class="footer-left-upper-section">
-          <div>
-            Impressum
-          </div>
-          <div>
-            Datenschutz
-          </div>
-          <div>
-            AGB
-          </div>
-        </div>
-        <div class="footer-left-lower-section">
-          <div>
-            Justin Kleefeldt.
-          </div>
-          <div>
-            Erstellt mit HTML, CSS, JS.
-          </div>
-        </div>
-      </div>
-      <div class="footer-right-section">
-        <div class="footer-right-section-element">
-          <div class="footer-sub-heading">
-            Telefon
-          </div>
-          <div>
-            +49 (0) 1515 0735480
-          </div>
-        </div>
-        <div class="footer-right-section-element">
-          <div class="footer-sub-heading">
-            E-Mail
-          </div>
-          <div>
-            justin@kleefeldt.com
-          </div>
-        </div>
-        <div class="footer-right-section-element">
-          <div class="footer-sub-heading">
-            Links           
-          </div>
-          <div class="footer-links">
-            <a href="https://www.linkedin.com/in/justin-kleefeldt-74379b28b" target="_blank">
-              <img class="footer-linkedin-icon" src="../img/linkedin-icon.png">
-            </a>
-            <a href="https://github.com/JustinKleefeldt?tab=repositories" target="_blank">
-              <img class="footer-github-icon" src="../img/github-icon.png">
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer class="footer js-footer"></footer>
     <script type="module" src="../js/website.js"></script>
+    <script type="module" src="../js/data/cvEntry.js"></script>
   </body>
 </html>

@@ -1,0 +1,94 @@
+{
+    "Ausbildung":
+    {
+        "Studium":
+        {
+            "Zeitraum": "09/2019 - 02/2022",
+            "Bezeichnung": "Angewandte Informatik",
+            "Unternehmen": "Hochschule Hannover",
+            "Adresse": "Ricklinger Stadtweg 118/120, 30459 Hannover",
+            "Fähigkeiten": ["Java", "Eclipse", "SQL", "Windows", "Linux", "Unix", "Bash", "UML-Diagramme"],
+            "Beschreibung": "Mein Studium beinhaltete schwerpunktmäßig Softwareentwicklung mit der Programmiersprache Java in Eclipse, allgemeine Lehren und Konzepte der Informatik und Mathematik, sowie den Umgang mit Datenbanken, verschiedenen Betriebssystemen und Netzwerken.<br><br>Mit dem Start des zweiten Semesters begannen dann die zunehmenden Covid-19 Einschränkungen immer mehr den Studienalltag zu stören. Nur noch Online-Vorlesungen konnten stattfinden, Lerngruppen und Tutorien entfielen. Zudem gab es in diesem Zeitraum in meinem persönlichen Umfeld noch weitere Umstände die dazu beigetragen haben, dass ich mich entschlossen habe das Studium frühzeitig zu beenden.",
+            "Abschlussnote": "",
+            "Sonstiges": "Link-WeitereTätigkeiten"
+        },
+        "Ausbildung":
+        {
+            "Zeitraum": "09/2017 - 08/2019",
+            "Bezeichnung": "Staatlich geprüfter Informatiker Medieninformatik",
+            "Unternehmen": "bib International College",
+            "Adresse": "Freundallee 15, 30173 Hannover",
+            "Fähigkeiten": ["C#", "Visual Studio", "Unity", "Oracle Datenbank", "SQL", "php", "HTML", "CSS", "JavaScript", "JQuery", "NodeJS", "Scrum", "UML Diagramme", "Lastenheft", "Pflichtenheft", "maya"],
+            "Beschreibung": "Meine Ausbildung beinhaltete schwerpunktmäßig Softwareentwicklung mit der Programmiersprache C# in Visual Studio, den Umgang mit SQL-Datenbanken und die Erstellung und Umsetzung von Datenbankkonzepten mit Oracle und der Programmiersprache PHP, sowie Webentwicklung mit HTML, CSS, JavaScript und PHP.<br><br>Außerdem Grundkentnisse der Informatik, beispielsweise zu Betriebssystemen und Netzwerken, agile Projektmanagement- und Softwareentwicklungskonzepte und deren Modellierung mithilfe von Lastenheft, Pflichtenheft, UML Diagrammen, Scrum, etc. Sowie Konzeption und Programmierung von Spielen in der Unity Game Engine, Erstellung von 3D Modellen und Animationen in 3D Studio Max und maya und Bildbearbeitung in Photoshop.",
+            "Abschlussnote": "1.9",
+            "Sonstiges": ""
+        },
+        "Schule":
+        {
+            "Zeitraum": "06/2009 - 08/2017",
+            "Bezeichnung": "Allgemeine Hochschulreife (Abitur)",
+            "Unternehmen": "IGS Langenhagen",
+            "Adresse": "Konrad-Adenauer-Straße 21, 30853 Langenhagen",
+            "Fähigkeiten": [],
+            "Beschreibung": "An der IGS Langenhagen habe ich die Schuljahre der Sekundarstufe II absolviert und im Abiturjahr 2017 meine allgemeine Hochschulreife erhalten.",
+            "Abschlussnote": "2.9",
+            "Sonstiges": ""
+        }
+    },
+    "Berufserfahrung":
+    {
+        "Praktikum":
+        {
+            "Zeitraum": "04/2019 - 06/2019",
+            "Bezeichnung": "Praktikum",
+            "Unternehmen": "Nexave GmbH & Co. KG",
+            "Adresse": "Eupener Straße 52, 30519 Hannover",
+            "Fähigkeiten": ["Oracle Datenbank", "SQL", "php", "HTML", "CSS", "JavaScript", "JQuery", "UML", "Diagramme", "Lastenheft", "Pflichtenheft"],
+            "Beschreibung": "Im Rahmen meines Praktikums haben eine weitere Praktikantin und ich drei große Aufgabenstellungen erarbeitet.<br><br>Als Erstes haben wir ein neues Datenbankkonzept für die Firma entworfen und daraufhin die alte Datenbank überführt.<br><br>Als Zweites haben wir ein Backend-System entwickelt, das eine Suchmaske und vorgefertigte Views der Kundendaten zur schnellen Einsicht zur Verfügung stellt und auch die Möglichkeit bietet Kundendaten anzupassen.<br><br>Als Drittes haben wir einen Webshop für den Verkauf von Displayschutzfolien für private und gewerbliche Endgeräte entwickelt. Inklusive Rechnungserstellung und Mail Service.",
+            "Sonstiges": ""
+        }
+    },
+    "WeitereTätigkeiten":
+    {
+        "ScanCenter":
+        {
+            "Zeitraum": "06/2024 - 05/2025",
+            "Bezeichnung": "Scan Operator",
+            "Unternehmen": "RICOH Deutschland GmbH",
+            "Adresse": "Vahrenwalder Straße 315, 30179 Hannover",
+            "Fähigkeiten": ["VBA", "Excel", "Kofax", "Teams"],
+            "Beschreibung": "Nach der intensiven Betreuungsphase habe ich über Bekannte ein spontanes Jobangebot bekommen.<br><br>Hierbei sollte eine neue Abteilung zur Digitalisierung von Kundendaten an einem neuen Standort entstehen.<br><br>Nach einer sehr produktiven Anfangsphase blieben jedoch zunehmend passende Aufträge aus, was zum Ablauf meines befristeten Arbeitsverhältnisses führte.",
+            "Sonstiges": "Link-Projekte"
+        },
+        "Betreuung":
+        {
+            "Zeitraum": "01/2023 - 05/2024",
+            "Bezeichnung": "Betreuung pflegebedürftiger Person",
+            "Unternehmen": "Privates Umfeld",
+            "Adresse": "",
+            "Fähigkeiten": [],
+            "Beschreibung": "Im Jahr 2020 ist eine Person in meinem privaten Umfeld sehr schwer erkrankt.<br><br>Dies hat im Laufe der Jahre an Intensität und Betreuungsaufwand zugenommen.<br><br>Daher habe ich mich im genannten Zeitraum hauptsächlich um die Alltagsbetreuung sowie Krankenhaus- und Arztbesuche der betroffenen Person gekümmert.",
+            "Sonstiges": ""
+        },
+        "Führerschein":
+        {
+            "Zeitraum": "01/2023 - 07/2023",
+            "Bezeichnung": "Führerschein Klasse B",
+            "Unternehmen": "Fahrschule Grünke",
+            "Adresse": "Kastanienallee 12, 30851 Langenhagen",
+            "Fähigkeiten": [],
+            "Beschreibung": "Anfang 2023 habe ich dann die fehlenden Theoriestunden nachgeholt und kurz darauf auch die theoretische Prüfung absolviert. Im Anschluss habe ich mich dann komplett auf die praktischen Fahrstunden und dann Anfang Juli 2023 die praktische Prüfung konzentriert.<br><br>Nebenbei habe ich einige persönliche Programmierprojekte umgesetzt.",
+            "Sonstiges": ""
+        },
+        "GameStop":
+        {
+            "Zeitraum": "03/2022 - 12/2022",
+            "Bezeichnung": "Teilzeitkraft",
+            "Unternehmen": "GameStop Deutschland GmbH",
+            "Adresse": "Marktplatz 5 - 7, 30853 Langenhagen",
+            "Fähigkeiten": [],
+            "Beschreibung": "Nach dem Informatik Studium wollte ich mir die Zeit nehmen, um den Führerschein zu machen.<br><br>Nebenbei habe ich einen Job als Aushilfskraft bei GameStop angefangen, um laufende Kosten abzudecken. Aufgrund meiner schnellen Einarbeitung und dem bestehenden Personalmangel habe ich nach wenigen Wochen als Vollzeitkraft auf Probe gearbeitet. Nach einem Probemonat habe ich mich mit meinem Chef auf eine Stelle als Teilzeitkraft geeinigt, um parallel noch den Führerschein weitermachen zu können.<br><br>Da der Personalmangel von langfristiger Natur war und die damit verbundene Arbeitszeitenplanung sehr kurzfristig erfolgte, war es jedoch schwer regelmäßig an Fahrschul-Theoriestunden teilzunehmen, weshalb ich die GameStop GmbH im Dezember 2022 verlassen habe.",
+            "Sonstiges": ""
+        }
+    }
+}

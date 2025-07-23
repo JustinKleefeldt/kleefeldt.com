@@ -6,3 +6,5 @@ export function addProject(name = undefined, timespan = undefined, description =
   projects.push(currProject);
   return currProject;
 }
+
+export default projects;

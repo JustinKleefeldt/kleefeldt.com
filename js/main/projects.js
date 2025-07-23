@@ -1,5 +1,10 @@
-import { projects } from '../data/project.js';
+import projects from '../data/project.js';
 
+//================ Render Projects (Projects - Section) ================//
+
+
+
+//================ Project Displayer (Projects - Section) ================//
 let projectDisplayIndex = 0;
 const leftArrowButtonElement = document.querySelector('.js-move-left');
 const rightArrowButtonElement = document.querySelector('.js-move-right');
