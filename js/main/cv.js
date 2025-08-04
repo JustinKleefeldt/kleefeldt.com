@@ -1,14 +1,13 @@
 import sections from "../data/section.js";
-import cvEntries from "../data/cvEntry.js";
 
 //================ Render CV (CV - Section) ================//
 const cvElement = sections.cv;
 
-export function renderCV() {
-  cvElement.innerHTML = generateCvHTML();
+export function renderCV(cvEntries) {
+  cvElement.innerHTML = generateCvHTML(cvEntries);
 }
 
-function generateCvHTML() {
+function generateCvHTML(cvEntries) {
   let html = `
       <div class="cv-container">
         <div class="cv-main-heading-row">
