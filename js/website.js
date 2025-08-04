@@ -19,7 +19,6 @@ loadCV(renderCV);
 
 //================ Render Projects (Projects - Section) ================//
 loadProjects();
-loadHTML("projects-section", "../html/projects.html", init);
 
 //================ Render Contact (Contact - Section) ================//
 loadHTML("contact-section", "../html/contact.html");
@@ -41,14 +40,11 @@ async function loadHTML(id, url, initFunc = null) {
   }
 }
 
-async function loadCV(initFunc = null) {
+async function loadCV() {
   try {
     const response = await fetch("../json/cvEntries.json");
     cvEntries = await response.json();
-
-    if (typeof initFunc === "function") {
-      initFunc(cvEntries);
-    }
+    renderCV(cvEntries);
   } catch (error) {
     console.error("Fehler beim Laden der Lebenslauf-Daten: ", error);
   }
@@ -69,6 +65,7 @@ async function loadProjects() {
         value.youtube
       );
     });
+    loadHTML("projects-section", "../html/projects.html", init);
   } catch (error) {
     console.error("Fehler beim Laden der Projekt-Daten: ", error);
   }
