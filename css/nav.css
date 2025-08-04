@@ -1,0 +1,138 @@
+.nav-bar {
+  height: var(--header-height);
+  background-color: var(--primary-color);
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.nav-bar a {
+  color: black;
+}
+
+.nav-bar-left-section {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.nav-bar-clover-container {
+  height: 2rem;
+}
+
+.nav-bar-clover-icon {
+  height: 100%;
+}
+
+.nav-bar-website-name {
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.nav-bar-link-kleefeldt {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-bar-right-section {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.hamburger-menu {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.hamburger-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.hamburger-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.hamburger-menu span:nth-child(2) {
+  top: 50%;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.off-screen-menu {
+  width: 25%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  position: fixed;
+  top: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s ease;
+  right: -25%;
+  opacity: 0.8;
+  z-index: 1000;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+.off-screen-menu ul {
+  width: 100%;
+  padding: 0;
+}
+
+.off-screen-menu li {
+  list-style: none;
+  line-height: 3rem;
+}
+
+.off-screen-menu li:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
+}

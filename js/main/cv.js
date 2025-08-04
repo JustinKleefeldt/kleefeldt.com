@@ -4,15 +4,12 @@ import cvEntries from "../data/cvEntry.js";
 //================ Render CV (CV - Section) ================//
 const cvElement = sections.cv;
 
-export function renderCV()
-{
+export function renderCV() {
   cvElement.innerHTML = generateCvHTML();
 }
 
-function generateCvHTML()
-{
-  let html =
-    `
+function generateCvHTML() {
+  let html = `
       <div class="cv-container">
         <div class="cv-main-heading-row">
           <div class="cv-main-heading-box"></div>
@@ -33,52 +30,46 @@ function generateCvHTML()
         </div>
     `;
 
-  Object.values(cvEntries.Ausbildung).forEach(entry =>
-  {
-    html += 
-      `
+  Object.values(cvEntries.Ausbildung).forEach((entry) => {
+    html += `
         <div class="cv-content-box">
           <div class="cv-box-left-section">
-            <div class="cv-box-timespan">
-              ${entry.Zeitraum}
-            </div>
-            <div class="cv-box-position">
-              ${entry.Bezeichnung}
-            </div>
-            <div class="cv-box-company">
-              ${entry.Unternehmen}
-            </div>
-            <div class="cv-box-location">
-              ${entry.Adresse}
+            <div class="cv-box-info">
+              <div class="cv-box-timespan">
+                ${entry.Zeitraum}
+              </div>
+              <div class="cv-box-position">
+                ${entry.Bezeichnung}
+              </div>
+              <div class="cv-box-company">
+                ${entry.Unternehmen}
+              </div>
+              <div class="cv-box-location">
+                ${entry.Adresse}
+              </div>
             </div>
       `;
-    
-    if(entry.Fähigkeiten.length > 0)
-    {
-      html +=
-        `
+
+    if (entry.Fähigkeiten.length) {
+      html += `
             <div class="cv-spacing-container">
               <div class="cv-spacing-line-horizontal"></div>
             </div>
             <div class="cv-box-chips">
         `;
 
-      entry.Fähigkeiten.forEach(skill =>
-      {
-        html +=
-          `
-              <div class="cv-chips">${skill}</div>
+      entry.Fähigkeiten.forEach((skill) => {
+        html += `
+              <div class="cv-chip">${skill}</div>
           `;
       });
 
-      html +=
-        `
+      html += `
             </div>
         `;
     }
 
-    html +=
-      `
+    html += `
           </div>
           <div class="cv-spacing-container">
             <div class="cv-spacing-line-vertical"></div>
@@ -87,39 +78,35 @@ function generateCvHTML()
             <div class="cv-box-text">
               ${entry.Beschreibung}
       `;
-    
-    if(entry.Abschlussnote)
-    {
-      html +=
-        `
+
+    if (entry.Abschlussnote) {
+      html += `
               <br><br>
               <span class="cv-final-grade">
                 Abschlussnote: ${entry.Abschlussnote}
               </span>
         `;
     }
-    
-    if(entry.Sonstiges == 'Link-WeitereTätigkeiten')
-    {
-      html +=
-      `
+
+    if (entry.Sonstiges == "Link-WeitereTätigkeiten") {
+      html += `
               <br><br>
               <button class="cv-link-other-activities js-other-activities-button">
-                &#10149; daraufhin siehe: Weitere T&auml;tigkeiten
+                <a href="#other-activities">
+                  &#10149; daraufhin siehe: Weitere T&auml;tigkeiten
+                </a>
               </button>
       `;
     }
-    
-    html +=
-      `
+
+    html += `
             </div>
           </div>
         </div>
       `;
   });
-  
-  html +=
-    `
+
+  html += `
       <div class="cv-sub-heading-row">
         <div class="cv-sub-heading">
           Berufserfahrung
@@ -127,52 +114,46 @@ function generateCvHTML()
       </div>
     `;
 
-  Object.values(cvEntries.Berufserfahrung).forEach(entry =>
-  {
-    html += 
-      `
+  Object.values(cvEntries.Berufserfahrung).forEach((entry) => {
+    html += `
         <div class="cv-content-box">
           <div class="cv-box-left-section">
-            <div class="cv-box-timespan">
-              ${entry.Zeitraum}
-            </div>
-            <div class="cv-box-position">
-              ${entry.Bezeichnung}
-            </div>
-            <div class="cv-box-company">
-              ${entry.Unternehmen}
-            </div>
-            <div class="cv-box-location">
-              ${entry.Adresse}
+            <div class="cv-box-info">
+              <div class="cv-box-timespan">
+                ${entry.Zeitraum}
+              </div>
+              <div class="cv-box-position">
+                ${entry.Bezeichnung}
+              </div>
+              <div class="cv-box-company">
+                ${entry.Unternehmen}
+              </div>
+              <div class="cv-box-location">
+                ${entry.Adresse}
+              </div>
             </div>
       `;
-    
-    if(entry.Fähigkeiten.length > 0)
-    {
-      html +=
-        `
+
+    if (entry.Fähigkeiten.length > 0) {
+      html += `
             <div class="cv-spacing-container">
               <div class="cv-spacing-line-horizontal"></div>
             </div>
             <div class="cv-box-chips">
         `;
 
-      entry.Fähigkeiten.forEach(skill =>
-      {
-        html +=
-          `
-              <div class="cv-chips">${skill}</div>
+      entry.Fähigkeiten.forEach((skill) => {
+        html += `
+              <div class="cv-chip">${skill}</div>
           `;
       });
 
-      html +=
-        `
+      html += `
             </div>
         `;
     }
 
-    html +=
-      `
+    html += `
           </div>
           <div class="cv-spacing-container">
             <div class="cv-spacing-line-vertical"></div>
@@ -186,61 +167,54 @@ function generateCvHTML()
       `;
   });
 
-  html +=
-    `
-      <div class="cv-sub-heading-row js-other-activities scroll-margin">
+  html += `
+      <div id="other-activities" class="cv-sub-heading-row js-other-activities scroll-margin">
         <div class="cv-sub-heading">
           Weitere T&auml;tigkeiten
         </div>
       </div>
     `;
 
-  Object.values(cvEntries.WeitereTätigkeiten).forEach(entry =>
-  {
-    html += 
-      `
+  Object.values(cvEntries.WeitereTätigkeiten).forEach((entry) => {
+    html += `
         <div class="cv-content-box">
           <div class="cv-box-left-section">
-            <div class="cv-box-timespan">
-              ${entry.Zeitraum}
-            </div>
-            <div class="cv-box-position">
-              ${entry.Bezeichnung}
-            </div>
-            <div class="cv-box-company">
-              ${entry.Unternehmen}
-            </div>
-            <div class="cv-box-location">
-              ${entry.Adresse}
+            <div class="cv-box-info">
+              <div class="cv-box-timespan">
+                ${entry.Zeitraum}
+              </div>
+              <div class="cv-box-position">
+                ${entry.Bezeichnung}
+              </div>
+              <div class="cv-box-company">
+                ${entry.Unternehmen}
+              </div>
+              <div class="cv-box-location">
+                ${entry.Adresse}
+              </div>
             </div>
       `;
-    
-    if(entry.Fähigkeiten.length > 0)
-    {
-      html +=
-        `
+
+    if (entry.Fähigkeiten.length > 0) {
+      html += `
             <div class="cv-spacing-container">
               <div class="cv-spacing-line-horizontal"></div>
             </div>
             <div class="cv-box-chips">
         `;
 
-      entry.Fähigkeiten.forEach(skill =>
-      {
-        html +=
-          `
-              <div class="cv-chips">${skill}</div>
+      entry.Fähigkeiten.forEach((skill) => {
+        html += `
+              <div class="cv-chip">${skill}</div>
           `;
       });
 
-      html +=
-        `
+      html += `
             </div>
         `;
     }
 
-    html +=
-      `
+    html += `
           </div>
           <div class="cv-spacing-container">
             <div class="cv-spacing-line-vertical"></div>
@@ -249,49 +223,47 @@ function generateCvHTML()
             <div class="cv-box-text">
               ${entry.Beschreibung}
       `;
-    
-    if(entry.Sonstiges == 'Link-Projekte')
-    {
-      html +=
-      `
+
+    if (entry.Sonstiges == "Link-Projekte") {
+      html += `
               <br><br>
               <button class="cv-link-projects js-projects-scroll">
-                &#10149; siehe: Projekte
+                <a href="#projects-section">
+                  &#10149; siehe: Projekte
+                </a>
               </button>
       `;
     }
-    
-    html +=
-      `
+
+    html += `
             </div>
           </div>
         </div>
       `;
   });
 
-  html +=
-    `
+  html += `
         <div class="cv-additional-container">
           <div class="cv-additional-upper-section">
             <div class="cv-additional-heading">
               Berufliche Kompetenzen
             </div>
             <div class="cv-additional-grid">
-              <div>
+              <div class="cv-additonal-entry">
                 <div class="cv-additional-box"></div>
-                Zielorientiertes Arbeiten
+                <div class="cv-additional-text">Zielorientiertes Arbeiten</div>
               </div>
-              <div>
+              <div class="cv-additonal-entry">
                 <div class="cv-additional-box"></div>
-                Schnelle Adaption an neue Aufgaben
+                <div class="cv-additional-text">Schnelle Adaption an neue Aufgaben</div>
               </div>
-              <div>
+              <div class="cv-additonal-entry">
                 <div class="cv-additional-box"></div>
-                Teamf&auml;higkeit & Einf&uuml;hlungsverm&ouml;gen
+                <div class="cv-additional-text">Teamf&auml;higkeit & Einf&uuml;hlungsverm&ouml;gen</div>
               </div>
-              <div>
+              <div class="cv-additonal-entry">
                 <div class="cv-additional-box"></div>
-                Flexibilit&auml;t bei der Arbeit
+                <div class="cv-additional-text">Flexibilit&auml;t bei der Arbeit</div>
               </div>
             </div>
           </div>
@@ -300,13 +272,13 @@ function generateCvHTML()
               Sprachen
             </div>
             <div class="cv-additional-grid">
-              <div>
+              <div class="cv-additonal-entry">
                 <div class="cv-additional-box"></div>
-                Deutsch (Muttersprache)
+                <div class="cv-additional-text">Deutsch (Muttersprache)</div>
               </div>
-              <div>
+              <div class="cv-additonal-entry">
                 <div class="cv-additional-box"></div>
-                Englisch
+                <div class="cv-additional-text">Englisch</div>
               </div>
             </div>
           </div>

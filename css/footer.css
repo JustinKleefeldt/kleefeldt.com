@@ -1,78 +1,165 @@
-.footer
-{
-  width: calc(100% - 100px);
+.footer {
+  width: calc(100% - 7.2rem);
   background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 50px;
+  flex-wrap: wrap;
+  gap: 2.15rem;
+  padding: 2.15rem 3.6rem;
 }
 
-.footer-left-section
-{
+.footer-left-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
 }
 
-.footer-left-upper-section
-{
+.footer-left-upper-section {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-.footer-left-lower-section
-{
+.footer-left-lower-section {
   display: flex;
   justify-content: left;
   align-items: center;
 }
 
-.footer-left-upper-section div, .footer-left-lower-section div
-{
-  margin-right: 10px;
+.footer-left-upper-section div,
+.footer-left-lower-section div {
+  margin-right: 1rem;
 }
 
-.footer-right-section
-{
+.footer-right-section {
   display: flex;
   justify-content: right;
   align-items: center;
+  gap: 2.15rem;
 }
 
-.footer-right-section-element
-{
+.footer-right-section-element {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 30px;
 }
 
-.footer-sub-heading
-{
+.footer-sub-heading {
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-.footer-links
-{
+.footer-links {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footer-linkedin-icon
-{
+.footer-linkedin-icon {
   height: 20px;
   margin: -4px 0;
 }
 
-.footer-github-icon
-{
+.footer-github-icon {
   height: 27px;
   margin: -7px 0;
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    justify-content: space-around;
+  }
+
+  .footer-right-section,
+  .footer-left-section {
+    flex-direction: column;
+  }
+
+  .footer-left-section {
+    gap: 1rem;
+  }
+
+  .footer-left-upper-section,
+  .footer-left-lower-section {
+    flex-direction: column;
+    gap: 2.15rem;
+  }
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1921px) {
+  .footer-sub-heading {
+    font-size: 1.5vw;
+  }
+
+  .footer-text {
+    font-size: 1vw;
+  }
+}
+
+@media (min-width: 2560px) {
+  .footer {
+    width: calc(100% - 10.8rem);
+    padding: 3.225rem 5.4rem;
+  }
+
+  .footer-right-section {
+    gap: 5.4rem;
+  }
+
+  .footer-linkedin-icon {
+    height: 30px;
+    margin: -4px 0;
+  }
+
+  .footer-github-icon {
+    height: 40px;
+    margin: -7px 0;
+  }
+}
+
+@media (min-width: 2880px) {
+  .footer-linkedin-icon {
+    height: 35px;
+    margin: -4px 0;
+  }
+
+  .footer-github-icon {
+    height: 47px;
+    margin: -7px 0;
+  }
+}
+
+@media (min-width: 3840px) {
+  .footer {
+    width: calc(100% - 14.4rem);
+    padding: 4.3rem 7.2rem;
+  }
+
+  .footer-right-section {
+    gap: 7.2rem;
+  }
+
+  .footer-linkedin-icon {
+    height: 40px;
+    margin: -4px 0;
+  }
+
+  .footer-github-icon {
+    height: 54px;
+    margin: -7px 0;
+  }
 }
