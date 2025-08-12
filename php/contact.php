@@ -1,4 +1,6 @@
 <?php
+  require_once(__DIR__ . '/config.php');
+
   if($_SERVER["REQUEST_METHOD"] === "POST") {
     $to = "contact.kleefeldt.com@gmail.com";
     
@@ -22,6 +24,16 @@
         \t> E-Mail: {$email}
         \t> Company: {$company}\r\n
       Message:\r\n" . wordwrap($message, 70, "\r\n");
+
+    // Google reCAPTCHA v2 Implementierung
+    $secret = $recaptcha_secret;
+    $response = $_POST["g-recaptcha-response"];
+    $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret}&response={$response}");
+    $captcha_success = json_decode($verify);
+
+    if(!$captcha_success->success) {
+      die("CAPTCHA failed!");
+    }
 
     if (mail($to, $subject, $body, $headers)) {
       echo "Thank you, your mail was send.";

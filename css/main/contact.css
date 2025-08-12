@@ -98,8 +98,10 @@
 .contact-last-row {
   flex: 1;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 20px;
 }
 
@@ -149,6 +151,12 @@
 
 .contact-button:active {
   opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .g-recaptcha {
+    overflow-x: scroll;
+  }
 }
 
 @media (max-width: 1024px) {
